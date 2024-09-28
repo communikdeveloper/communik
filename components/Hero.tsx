@@ -21,7 +21,9 @@ const Hero = () => {
    overflow-x-clip"
     >
       <div className="max-w-6xl mx-auto">
+
         <div className="md:flex items-center">
+
           <div className="md:w-[580px]">
             <div className="tag">Growth based services</div>
             <h1
@@ -43,25 +45,26 @@ const Hero = () => {
             </div>
 
             <div className="flex gap-3 mt-6 w-full">
-              <div className="  px-3   backdrop-blur-2xl bg-white/10 border-y-white border-y text-center  py-10 rounded-md ">
-                <h3 className="text-2xl  font-bold text-yellow-500">100+</h3>
-                <p className="text-white text-lg">Projects Completed</p>
+              <div className=" px-1  sm:px-3   backdrop-blur-2xl bg-white/10 border-y-white border-y text-center py-5 sm:py-10 rounded-md ">
+                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500">100+</h3>
+                <p className="text-white text-sm sm:text-lg">Projects Completed</p>
               </div>
 
-              <div className="  px-3  text-center backdrop-blur-3xl py-10 rounded-lg ">
-                <h3 className="text-2xl  font-bold text-yellow-500">20+</h3>
-                <p className="text-white text-lg">Years of Experience</p>
+              <div className="  px-1  sm:px-3  text-center backdrop-blur-2xl  border-y-white border-y  bg-white/10 py-5 sm:py-10 rounded-lg ">
+                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500">20+</h3>
+                <p className="text-white text-sm sm:text-lg">Years of Experience</p>
               </div>
 
-              <div className="  px-3 text-center  backdrop-blur-3xl py-10 rounded-lg ">
-                <h3 className="text-2xl  font-bold text-yellow-500">50+</h3>
-                <p className="text-white text-lg">Clients Worldwide</p>
+              <div className=" px-1  sm:px-3 text-center backdrop-blur-2xl  border-y-white border-y  bg-white/10 py-5 sm:py-10 rounded-lg ">
+                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500">50+</h3>
+                <p className="text-white  text-sm sm:text-lg">Clients Worldwide</p>
               </div>
             </div>
           </div>
 
           <div className="mt-20 md:mt-0  md:flex-1  relative">
 
+          
             <motion.img
               src="/hero1.png"
              height={220}
