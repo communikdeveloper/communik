@@ -80,17 +80,18 @@ const ReviewCard = ({
 
 const Testimonials = () => {
   return (
-    <div className="relative flex flex-col  gap-5    max-w-6xl pt-20  pb-20 mx-auto h-[50rem] ">
+    <div className=" flex flex-col  gap-5  max-w-6xl pt-10  mx-auto h-[45rem] ">
       <div className="border rounded-xl px-5 py-10">
         <div className="tag text-black border-black">Trusted Clients</div>
-        <h2 className="text-4xl  mt-5">What our clients say</h2>
-        <p>Let&apos;s Create Together. 
+        <h2 className="text-4xl md:text-6xl font-semibold  text-transparent bg-clip-text bg-gradient-to-b from-black to-blue-900  mt-5">What our clients say</h2>
+        <p className="mt-3 text-lg">Let&apos;s Create Together. 
         COMMUNIK is more than a design agency, we&apos;re your creative partner.</p>
        
       </div>
       
-        <div className="relative border  rounded-xl">
-        <Globe className="max-w-[600px] w-full absolute right-0    h-full   " />
+        <div className="relative border   rounded-xl">
+
+        <Globe className="max-w-[540px]  absolute  right-0  mx-auto w-full h-full   " />
         <Marquee pauseOnHover className="[--duration:20s] z-20 mt-10">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />

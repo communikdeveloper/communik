@@ -6,6 +6,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { useRef } from "react";
+import NumberTicker from "./ui/number-ticker";
 const Hero = () => {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -46,17 +47,19 @@ const Hero = () => {
 
             <div className="flex gap-3 mt-6 w-full">
               <div className=" px-1  sm:px-3   backdrop-blur-2xl bg-white/10 border-y-white border-y text-center py-5 sm:py-10 rounded-md ">
-                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500">100+</h3>
+                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500">
+                <NumberTicker value={100} /> +
+                </h3>
                 <p className="text-white text-sm sm:text-lg">Projects Completed</p>
               </div>
 
               <div className="  px-1  sm:px-3  text-center backdrop-blur-2xl  border-y-white border-y  bg-white/10 py-5 sm:py-10 rounded-lg ">
-                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500">20+</h3>
+                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500"><NumberTicker value={20} /> +</h3>
                 <p className="text-white text-sm sm:text-lg">Years of Experience</p>
               </div>
 
               <div className=" px-1  sm:px-3 text-center backdrop-blur-2xl  border-y-white border-y  bg-white/10 py-5 sm:py-10 rounded-lg ">
-                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500">50+</h3>
+                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500"><NumberTicker value={50} /> +</h3>
                 <p className="text-white  text-sm sm:text-lg">Clients Worldwide</p>
               </div>
             </div>
