@@ -82,12 +82,12 @@ const ReviewCard = ({
 
 const Testimonials = () => {
   return (
-    <div className="relative grid grid-cols-1 sm:grid-cols-2  gap-5    max-w-6xl pt-20  pb-20 mx-auto h-[5 0rem] ">
+    <div className="relative grid grid-cols-1 sm:grid-cols-2  gap-5    max-w-6xl pt-20  pb-20 mx-auto h-[50rem] ">
       <div className="border rounded-xl px-5 py-10">
-        <div className="tag text-black border-black">Trusted by</div>
-        <h2 className="text-4xl mt-5">Top Companies</h2>
-        <p>Let’s Create Together. 
-        COMMUNIK is more than a design agency, we’re your creative partner.</p>
+        <div className="tag text-black border-black">Trusted Clients</div>
+        <h2 className="text-4xl  mt-5">What our clients say</h2>
+        <p>Let&apos;s Create Together. 
+        COMMUNIK is more than a design agency, we&apos;re your creative partner.</p>
         <Marquee pauseOnHover className="[--duration:20s] mt-10">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
@@ -101,7 +101,7 @@ const Testimonials = () => {
       </div>
       
 
-      <Globe className="max-w-[600px] w-full border  rounded-xl  h-full top-28  " />
+      <Globe className="max-w-[600px] w-full border  rounded-xl  h-full  top-16 " />
     </div>
   );
 };
