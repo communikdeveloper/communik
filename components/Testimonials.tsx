@@ -61,18 +61,16 @@ const ReviewCard = ({
         className={cn(
           "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
           // light styles
-          "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-          // dark styles
-          "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+          "border-gray-950/[.1] bg-white hover:bg-slate-100",
         )}
       >
         <div className="flex flex-row items-center gap-2">
           <img className="rounded-full" width="32" height="32" alt="" src={img} />
           <div className="flex flex-col">
-            <figcaption className="text-sm font-medium dark:text-white">
+            <figcaption className="text-sm font-medium">
               {name}
             </figcaption>
-            <p className="text-xs font-medium dark:text-white/40">{username}</p>
+            <p className="text-xs font-medium ">{username}</p>
           </div>
         </div>
         <blockquote className="mt-2 text-sm">{body}</blockquote>
@@ -82,13 +80,18 @@ const ReviewCard = ({
 
 const Testimonials = () => {
   return (
-    <div className="relative grid grid-cols-1 sm:grid-cols-2  gap-5    max-w-6xl pt-20  pb-20 mx-auto h-[50rem] ">
+    <div className="relative flex flex-col  gap-5    max-w-6xl pt-20  pb-20 mx-auto h-[50rem] ">
       <div className="border rounded-xl px-5 py-10">
         <div className="tag text-black border-black">Trusted Clients</div>
         <h2 className="text-4xl  mt-5">What our clients say</h2>
         <p>Let&apos;s Create Together. 
         COMMUNIK is more than a design agency, we&apos;re your creative partner.</p>
-        <Marquee pauseOnHover className="[--duration:20s] mt-10">
+       
+      </div>
+      
+        <div className="relative border  rounded-xl">
+        <Globe className="max-w-[600px] w-full absolute right-0    h-full   " />
+        <Marquee pauseOnHover className="[--duration:20s] z-20 mt-10">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
@@ -98,10 +101,8 @@ const Testimonials = () => {
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      </div>
-      
 
-      <Globe className="max-w-[600px] w-full border  rounded-xl  h-full  top-16 " />
+        </div>
     </div>
   );
 };

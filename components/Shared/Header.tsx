@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 import { motion, useAnimation } from "framer-motion";
 
 
@@ -23,7 +23,7 @@ const Header = () => {
   //   };
   // }, [controls]);
   return (
-    <header className="fixed w-full  z-10 backdrop-blur-sm ">
+    <header className="fixed w-full  z-50 backdrop-blur-sm ">
          <div className="flex justify-center items-center py-3 gap-3 bg-black text-white text-sm">
         <p className="text-white/60 hidden md:block">Streamline your project management</p>
         <div className="inline-flex  gap-1 items-center">
