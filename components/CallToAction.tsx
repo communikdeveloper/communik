@@ -20,7 +20,9 @@ export const CallToAction = () => {
     >
       <div className="container">
         <div className="max-w-[540px] mx-auto relative">
-          <h2 className="section-title">Let&apos;s Create Together.</h2>
+          <h2 className="section-title leading-[80px]">
+            Let&apos;s Create Together.
+          </h2>
           <p className="section-desc mt-5">
             COMMUNIK is more than a design agency, we&apos;re your creative
             partner.
@@ -47,7 +49,9 @@ export const CallToAction = () => {
         </div>
 
         <div className="flex gap-2 items-center mt-[30px] justify-center">
-          <button className=" bg-black px-3 py-2 rounded-md text-white">Book a Call</button>
+          <button className=" bg-black px-3 py-2 rounded-md text-white">
+            Book a Call
+          </button>
         </div>
       </div>
     </section>

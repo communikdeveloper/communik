@@ -1,4 +1,3 @@
-import Logo from "@/assets/logosaas.png";
 import Image from "next/image";
 
 export const Footer = () => {
@@ -15,17 +14,30 @@ export const Footer = () => {
           />
         </div>
         <nav className="flex flex-col md:flex-row md:justify-center gap-6 mt-6">
-          <a href="">About</a>
-          <a href="">Our Portfolio</a>
-          <a href="">Logo,Brand,Packaging Design</a>
-          <a href="">Digital and Print Design</a>
-          <a href="">Retail and Space Branding</a>
+          <a href="/about-us">About</a>
+          <a href="/our-portfolio">Our Portfolio</a>
+          <a href="/logo-brand-identity-design">Logo,Brand,Packaging Design</a>
+          <a href="/digital-print-design">Digital and Print Design</a>
+          <a href="/retail-office-branding">Retail and Space Branding</a>
         </nav>
         <div className="flex justify-center gap-6 mt-6">
-
+          <Image
+            src="/social-insta.svg"
+            alt="Sass Logo"
+            width={30}
+            height={30}
+            className=" rounded-lg  bg-white relative"
+          />
+          <Image
+            src="/social-linkedin.svg"
+            alt="Sass Logo"
+            width={30}
+            height={30}
+            className=" rounded-lg bg-white relative"
+          />
         </div>
         <p className="mt-6 pb-2">
-        Copyright © 2024. Communik. All Rights Reserved.
+          Copyright © 2024. Communik. All Rights Reserved.
         </p>
       </div>
     </footer>

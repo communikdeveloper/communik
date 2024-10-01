@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowDown01, ArrowRight } from "lucide-react";
 
 const Header = () => {
   const controls = useAnimation();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +23,22 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [controls]);
+
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about-us" },
+    {
+      name: "Services",
+      href: "/services",
+      dropdown: [
+        { name: "Logo & Brand Identity", href: "/logo-brand-identity-design" },
+        { name: "Digital & Print Design", href: "/digital-print-design" },
+        { name: "Retail & Office Branding", href: "/retail-office-branding" },
+      ],
+    },
+    { name: "Portfolio", href: "/our-portfolio" },
+  ];
+
   return (
     <header className="fixed w-full  z-50 backdrop-blur-sm ">
       <div className="flex justify-center items-center py-3 gap-3 bg-black text-white text-sm">
@@ -35,17 +52,48 @@ const Header = () => {
         </div>
       </div>
       <div className="max-w-7xl py-5 px-2 mx-auto flex justify-between items-center">
-        <Image src="/logo.png" width={100} height={100} alt="logo" />
+        <Link href={"/"}>
+          <Image src="/logo.png" width={100} height={100} alt="logo" />
+        </Link>
 
         <nav className="hidden md:flex gap-x-6 items-center">
-          {["Home", "About", "Services", "Contact"].map((item, index) => (
-            <motion.div
-              key={index}
-              animate={controls}
-              className="hover:text-yellow-500 text-white font-semibold scroll"
-            >
-              <Link href="/">{item}</Link>
-            </motion.div>
+          {navLinks.map((link, index) => (
+            <div key={index}>
+              {link.dropdown ? (
+                <div className="relative inline-block">
+                  <motion.div
+                    key={index}
+                    animate={controls}
+                    className="hover:text-yellow-500 flex items-center gap-3 group text-white font-semibold scroll cursor-pointer"
+                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  >
+                    {link.name}
+                    <ArrowDown01 className="w-4 h-4" />
+                  </motion.div>
+                  {isDropdownOpen && (
+                    <div className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-md shadow-lg">
+                      {link.dropdown.map((subLink, subIndex) => (
+                        <Link
+                          key={subIndex}
+                          href={subLink.href}
+                          className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                        >
+                          {subLink.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <motion.div
+                  key={index}
+                  animate={controls}
+                  className="hover:text-yellow-500 text-white font-semibold scroll"
+                >
+                  <Link href={link.href}>{link.name}</Link>
+                </motion.div>
+              )}
+            </div>
           ))}
         </nav>
       </div>
