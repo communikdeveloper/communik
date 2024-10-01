@@ -10,17 +10,7 @@ export default function Home() {
     <div className=" font-[family-name:var(--font-geist-sans)]">
       <Hero />
       <Clients />
-
-      <VelocityScroll
-        text="Growth based services *"
-        default_velocity={3}
-        className="font-display text-center mb-2 drop-shadow-lg bg-blue-700 text-4xl font-bold tracking-[-0.02em]  text-yellow-400  md:text-7xl md:leading-[5rem]"
-      />
-
       <Services />
-
-      
-
       <Testimonials />
       <CallToAction />
     </div>
