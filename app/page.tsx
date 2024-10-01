@@ -1,7 +1,6 @@
 import { CallToAction } from "@/components/CallToAction";
 import Clients from "@/components/Clients";
 import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import { VelocityScroll } from "@/components/ui/scroll-based-velocity";
@@ -20,7 +19,7 @@ export default function Home() {
 
       <Services />
 
-      <Projects />
+      
 
       <Testimonials />
       <CallToAction />

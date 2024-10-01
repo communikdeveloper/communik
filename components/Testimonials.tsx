@@ -86,7 +86,7 @@ const Testimonials = () => {
       </div>
 
       <div className="relative  h-[25rem] sm:h-full    rounded-xl">
-        <Globe className="max-w-[640px] -top-10 absolute    mx-auto w-full h-full   " />
+        <Globe className="max-w-[640px] -top-10 absolute    mx-auto w-full h-full" />
       </div>
     </div>
    </section>

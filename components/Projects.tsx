@@ -5,7 +5,6 @@ import {
   motion,
   useScroll,
   useTransform,
-  useMotionValueEvent,
 } from "framer-motion";
 import { useRef } from "react";
 
@@ -64,7 +63,7 @@ const Projects = () => {
               alt={project.alt}
               width={400}
               height={400}
-              className="transition-transform  duration-500 group-hover:scale-110"
+              className=""
             />
           ))}
         </div>
