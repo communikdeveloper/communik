@@ -28,7 +28,7 @@ const Hero = () => {
           <div className="md:w-[580px]">
             <div className="tag">Growth based services</div>
             <h1
-              className=" text-5xl md:text-6xl font-bold tracking-tighter
+              className=" text-5xl drop-shadow-lg md:text-6xl font-bold tracking-tighter
           text-white mt-6 "
             >
               #1 Worldwide{" "}

@@ -80,12 +80,21 @@ const config: Config = {
   				'100%': {
   					transform: 'rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)'
   				}
+  			},
+  			'background-position-spin': {
+  				'0%': {
+  					backgroundPosition: 'top center'
+  				},
+  				'100%': {
+  					backgroundPosition: 'bottom center'
+  				}
   			}
   		},
   		animation: {
   			marquee: 'marquee var(--duration) infinite linear',
   			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
-  			orbit: 'orbit calc(var(--duration)*1s) linear infinite'
+  			orbit: 'orbit calc(var(--duration)*1s) linear infinite',
+  			'background-position-spin': 'background-position-spin 3000ms infinite alternate'
   		}
   	}
   },

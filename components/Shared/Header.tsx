@@ -1,34 +1,37 @@
-'use client'
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-
+import { ArrowRight } from "lucide-react";
 
 const Header = () => {
   const controls = useAnimation();
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.scrollY > 10) {
-  //       controls.start({ color: "#000" }); // Turn nav links black on scroll
-  //     } else {
-  //       controls.start({ color: "#fff" }); // Default color when not scrolled
-  //     }
-  //   };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        controls.start({ color: "#000" }); // Turn nav links black on scroll
+      } else {
+        controls.start({ color: "#fff" }); // Default color when not scrolled
+      }
+    };
 
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, [controls]);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [controls]);
   return (
     <header className="fixed w-full  z-50 backdrop-blur-sm ">
-         <div className="flex justify-center items-center py-3 gap-3 bg-black text-white text-sm">
-        <p className="text-white/60 hidden md:block">Streamline your project management</p>
+      <div className="flex justify-center items-center py-3 gap-3 bg-black text-white text-sm">
+        <p className="text-white/60 hidden md:block">
+          Streamline your projects
+        </p>
         <div className="inline-flex  gap-1 items-center">
-          <p>Get Started for free</p>
-          {/* <ArrowRight className="h-4 w-4 inline-flex hover:translate-x-2 transition duration-500 justify-center items-center" /> */}
+          <p>Let&apos;s Create Together.</p>
+
+          <ArrowRight className="h-4 w-4 inline-flex hover:translate-x-2 transition duration-500 justify-center items-center" />
         </div>
       </div>
       <div className="max-w-7xl py-5 px-2 mx-auto flex justify-between items-center">
@@ -39,11 +42,9 @@ const Header = () => {
             <motion.div
               key={index}
               animate={controls}
-              className="hover:text-yellow-500"
+              className="hover:text-yellow-500 text-white font-semibold scroll"
             >
-              <Link href="/">
-                {item}
-              </Link>
+              <Link href="/">{item}</Link>
             </motion.div>
           ))}
         </nav>
