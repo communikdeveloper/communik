@@ -6,7 +6,8 @@ import {
   useTransform,
 } from "framer-motion";
 import { useRef } from "react";
-import NumberTicker from "./ui/number-ticker";
+
+
 const Hero = () => {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -26,7 +27,7 @@ const Hero = () => {
         <div className="md:flex items-center">
 
           <div className="md:w-[580px]">
-            <div className="tag">Growth based services</div>
+           
             <h1
               className=" text-5xl drop-shadow-lg md:text-6xl font-bold tracking-tighter
           text-white mt-6 "
@@ -48,18 +49,18 @@ const Hero = () => {
             <div className="flex gap-3 mt-6 w-full">
               <div className=" px-1  sm:px-3   backdrop-blur-2xl bg-white/10 border-y-white border-y text-center py-5 sm:py-10 rounded-md ">
                 <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500">
-                <NumberTicker value={100} /> +
+                100 +
                 </h3>
                 <p className="text-white text-sm sm:text-lg">Projects Completed</p>
               </div>
 
               <div className="  px-1  sm:px-3  text-center backdrop-blur-2xl  border-y-white border-y  bg-white/10 py-5 sm:py-10 rounded-lg ">
-                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500"><NumberTicker value={20} /> +</h3>
+                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500">20 +</h3>
                 <p className="text-white text-sm sm:text-lg">Years of Experience</p>
               </div>
 
               <div className=" px-1  sm:px-3 text-center backdrop-blur-2xl  border-y-white border-y  bg-white/10 py-5 sm:py-10 rounded-lg ">
-                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500"><NumberTicker value={50} /> +</h3>
+                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500">50 +</h3>
                 <p className="text-white  text-sm sm:text-lg">Clients Worldwide</p>
               </div>
             </div>
@@ -68,32 +69,9 @@ const Hero = () => {
           <div className="mt-20 md:mt-0  md:flex-1  relative">
 
           
-            <motion.img
-              src="/hero1.png"
-             height={220}
-             width={220}
-             alt="cylinder Image"
-             className="h-full w-full"
-             animate={{
-                translateY:[-20,20]
-              }}
-              transition={{
-                repeat:Infinity,
-                repeatType:"mirror",
-                duration:4,
-                ease:"easeInOut"
-              }}
-           />
-            <motion.img
-             src="/hero.png"
-             width={220}
-             alt="Noodel Image"
-             className="hidden lg:block lg:absolute -bottom-10 -right-10  rotate-[30deg]"
-             style={{
-               rotate:30,
-               translateY:translateY
-             }}
-           />
+           
+            
+           
            
           </div>
         </div>
