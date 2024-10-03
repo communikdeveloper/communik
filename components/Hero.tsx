@@ -1,10 +1,8 @@
 "use client";
 
-import {
-  motion,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { PhoneCallIcon } from "lucide-react";
+import Link from "next/link";
 import { useRef } from "react";
 
 
@@ -23,11 +21,8 @@ const Hero = () => {
    overflow-x-clip"
     >
       <div className="max-w-6xl mx-auto">
-
         <div className="md:flex items-center">
-
           <div className="md:w-[580px]">
-           
             <h1
               className=" text-5xl drop-shadow-lg md:text-6xl font-bold tracking-tighter
           text-white mt-6 "
@@ -43,37 +38,43 @@ const Hero = () => {
               global scale.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
-              <button className="btn btn-primary">Book a Call</button>
+              <Link href="tel:1234567" className="btn btn-primary">
+                <PhoneCallIcon  className="mr-2"/>
+                <span>Book a Call</span>
+              </Link>
             </div>
 
             <div className="flex gap-3 mt-6 w-full">
               <div className=" px-1  sm:px-3   backdrop-blur-2xl bg-white/10 border-y-white border-y text-center py-5 sm:py-10 rounded-md ">
                 <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500">
-                100 +
+                  100 +
                 </h3>
-                <p className="text-white text-sm sm:text-lg">Projects Completed</p>
+                <p className="text-white text-sm sm:text-lg">
+                  Projects Completed
+                </p>
               </div>
 
               <div className="  px-1  sm:px-3  text-center backdrop-blur-2xl  border-y-white border-y  bg-white/10 py-5 sm:py-10 rounded-lg ">
-                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500">20 +</h3>
-                <p className="text-white text-sm sm:text-lg">Years of Experience</p>
+                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500">
+                  20 +
+                </h3>
+                <p className="text-white text-sm sm:text-lg">
+                  Years of Experience
+                </p>
               </div>
 
               <div className=" px-1  sm:px-3 text-center backdrop-blur-2xl  border-y-white border-y  bg-white/10 py-5 sm:py-10 rounded-lg ">
-                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500">50 +</h3>
-                <p className="text-white  text-sm sm:text-lg">Clients Worldwide</p>
+                <h3 className="text-2xl sm:text-3xl  font-bold text-yellow-500">
+                  50 +
+                </h3>
+                <p className="text-white  text-sm sm:text-lg">
+                  Clients Worldwide
+                </p>
               </div>
             </div>
           </div>
 
-          <div className="mt-20 md:mt-0  md:flex-1  relative">
-
-          
-           
-            
-           
-           
-          </div>
+          <div className="mt-20 md:mt-0  md:flex-1  relative"></div>
         </div>
       </div>
     </section>

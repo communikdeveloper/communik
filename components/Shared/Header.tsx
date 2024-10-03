@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { ArrowDown, ArrowDown01, ArrowRight } from "lucide-react";
+import {  ArrowRight, ChevronDown } from "lucide-react";
 
 const Header = () => {
   const controls = useAnimation();
@@ -26,7 +26,7 @@ const Header = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about-us" },
+    { name: "About Us", href: "/about-us" },
     {
       name: "Services",
       href: "/services",
@@ -37,6 +37,7 @@ const Header = () => {
       ],
     },
     { name: "Portfolio", href: "/our-portfolio" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   return (
@@ -68,7 +69,7 @@ const Header = () => {
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   >
                     {link.name}
-                    <ArrowDown01 className="w-4 h-4" />
+                    <ChevronDown className="w-4 h-4" /> 
                   </motion.div>
                   {isDropdownOpen && (
                     <div className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-md shadow-lg">
