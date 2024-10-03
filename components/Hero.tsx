@@ -2,9 +2,9 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { PhoneCallIcon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -39,7 +39,7 @@ const Hero = () => {
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
               <Link href="tel:1234567" className="btn btn-primary">
-                <PhoneCallIcon  className="mr-2"/>
+                <PhoneCallIcon className="mr-2" />
                 <span>Book a Call</span>
               </Link>
             </div>
@@ -74,7 +74,15 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="mt-20 md:mt-0  md:flex-1  relative"></div>
+          <div className="mt-20 md:mt-0  md:flex-1  relative">
+            <Image
+              className=" "
+              src="/hero1.png"
+              alt="globe"
+              width={700}
+              height={700}
+            />
+          </div>
         </div>
       </div>
     </section>
