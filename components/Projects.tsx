@@ -1,12 +1,4 @@
-"use client";
-import React from "react";
 import Image from "next/image";
-import {
-  motion,
-  useScroll,
-  useTransform,
-} from "framer-motion";
-import { useRef } from "react";
 
 const projects = [
   { src: "/project1.webp", alt: "Project 1" },
@@ -18,35 +10,11 @@ const projects = [
 ];
 
 const Projects = () => {
-  const sectionRef = useRef(null);
 
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"],
-  });
-  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+  
   return (
     <section className="bg-gradient-to-b py-20 relative from-blue-700 via-indigo-500 to-white">
-      <motion.img
-        src="/pyramid.png"
-        alt="star"
-        height={248}
-        width={248}
-        style={{
-          translateY: translateY,
-        }}
-        className="absolute top-24 left-3 hidden md:block"
-      />
-      <motion.img
-        src="/spring.png"
-        alt="star"
-        height={248}
-        width={248}
-        style={{
-          translateY: translateY,
-        }}
-        className="absolute bottom-24 right-3 hidden md:block"
-      />
+      
       <div className="max-w-7xl mx-auto px-3">
         <h2 className=" text-4xl sm:text-6xl text-white drop-shadow-md text-center font-bold">
           Portfolio

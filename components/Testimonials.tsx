@@ -2,6 +2,7 @@ import React from "react";
 import Globe from "@/components/ui/globe";
 import Marquee from "@/components/ui/marquee";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const reviews = [
   {
@@ -53,7 +54,7 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <Image className="rounded-full" width="32" height="32" alt="" src={img} />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium">{name}</figcaption>
           <p className="text-xs font-medium ">{username}</p>
@@ -66,7 +67,7 @@ const ReviewCard = ({
 
 const Testimonials = () => {
   return (
-   <section className=" bg-gradient-to-r from-white to-fuchsia-300">
+   <section className=" bg-gradient-to-r relative from-white to-fuchsia-300">
     <div className="  grid  grid-cols-1 sm:grid-cols-2  gap-5  max-w-6xl  mx-auto h-full ">
       <div className=" rounded-xl px-5 py-10">
         <div className="tag text-black border-black">Happy Clients</div>
@@ -85,8 +86,9 @@ const Testimonials = () => {
         </Marquee>
       </div>
 
-      <div className="relative  h-[25rem] sm:h-full    rounded-xl">
-        <Globe className="max-w-[640px] -top-10 absolute    mx-auto w-full h-full" />
+      <div className="  h-[25rem] sm:h-full    rounded-xl">
+        {/* <Globe className="max-w-[640px] -top-10 absolute    mx-auto w-full h-full" /> */}
+        <Image className=" absolute bottom-0 right-0" src="/globe.webp" alt="globe" width={700} height={700} />
       </div>
     </div>
    </section>
