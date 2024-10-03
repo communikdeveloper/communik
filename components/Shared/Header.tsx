@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import {  ArrowRight, ChevronDown } from "lucide-react";
+import {  ArrowRight, ChevronDown, MessageCircle } from "lucide-react";
 
 const Header = () => {
   const controls = useAnimation();
@@ -97,6 +97,11 @@ const Header = () => {
             </div>
           ))}
         </nav>
+
+        <Link className="py-2 px-3 flex rounded-lg items-center justify-center text-white  bg-green-500" href="">
+        <Image src="/whatsapp.png" width={1000} height={1000} alt="icon"  className="  w-6 h-6 mr-3"/>
+        Chat with us
+        </Link>
       </div>
     </header>
   );
