@@ -112,7 +112,7 @@ export function ContactFormComponent() {
                 </Button>
               </form>
               {submitSuccess && (
-                <p className="text-green-500 mt-4 text-center">Thank you for your message. We'll get back to you soon!</p>
+                <p className="text-green-500 mt-4 text-center">Thank you for your message. We&apos;ll get back to you soon!</p>
               )}
             </div>
           </div>
