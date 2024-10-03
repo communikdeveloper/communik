@@ -98,7 +98,7 @@ const Header = () => {
           ))}
         </nav>
 
-        <Link className="py-2 px-3 flex rounded-lg items-center justify-center text-white  bg-green-500" href="">
+        <Link className="py-2 px-3 flex rounded-lg items-center justify-center text-white  bg-green-500" href="https://api.whatsapp.com/send?phone=+918860341444&text=Hello">
         <Image src="/whatsapp.png" width={1000} height={1000} alt="icon"  className="  w-6 h-6 mr-3"/>
         Chat with us
         </Link>
