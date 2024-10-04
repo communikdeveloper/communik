@@ -88,7 +88,7 @@ const Testimonials = () => {
 
       <div className="  h-[25rem] sm:h-full    rounded-xl">
         {/* <Globe className="max-w-[640px] -top-10 absolute    mx-auto w-full h-full" /> */}
-        <Image className=" absolute bottom-0 right-0" src="/globe.webp" alt="globe" width={700} height={700} />
+        <Image className=" absolute bottom-0  right-0" src="/globe.webp" alt="globe" width={700} height={700} />
       </div>
     </div>
    </section>
