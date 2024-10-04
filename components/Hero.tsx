@@ -75,12 +75,36 @@ const Hero = () => {
           </div>
 
           <div className="mt-20 md:mt-0  md:flex-1  relative">
-            <Image
-              className=" "
-              src="/hero1.png"
+            <motion.div
+              className="h-full w-full"
+              animate={{
+                translateY: [-30, 30],
+              }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "mirror",
+                duration: 4,
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                className=" "
+                src="/hero1.png"
+                alt="globe"
+                width={700}
+                height={700}
+              />
+            </motion.div>
+
+            <motion.img
+              className="absolute bottom-0  right-1 "
+              src="/hero.png"
               alt="globe"
-              width={700}
-              height={700}
+              width={200}
+              height={200}
+              style={{
+                translateY: translateY,
+              }}
             />
           </div>
         </div>
