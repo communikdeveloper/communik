@@ -81,7 +81,7 @@ export function GlobeDemo() {
   const isInView = useInView(ref)
   const globeConfig = {
     pointSize: 4,
-    globeColor: "#062056",
+    globeColor: "#183EC2",
     showAtmosphere: true,
     atmosphereColor: "#FFFFFF",
     atmosphereAltitude: 0.1,
@@ -101,7 +101,7 @@ export function GlobeDemo() {
     autoRotate: true,
     autoRotateSpeed: 0.5,
   };
-  const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
+  const colors = ["#f4a261", "#e76f51", "#e9c46a"]; 
   const sampleArcs = [
     {
       order: 1,
@@ -466,7 +466,7 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div ref={ref} className="flex flex-row items-center  bg-gradient-to-b from-white to-pink-300justify-center py-20  relative w-full">
+    <div ref={ref} className="flex flex-row items-center  bg-gradient-to-r from-white to-pink-300 justify-center py-20  relative w-full">
 
       <div className="max-w-7xl mx-auto w-full flex flex-col sm:flex-row relative overflow-hidden h-full md:h-[40rem] px-4">
 
