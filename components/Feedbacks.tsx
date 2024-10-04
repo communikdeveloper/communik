@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion,useInView } from "framer-motion";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -77,6 +77,8 @@ const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
 });
 
 export function GlobeDemo() {
+  const ref = useRef(null)
+  const isInView = useInView(ref)
   const globeConfig = {
     pointSize: 4,
     globeColor: "#062056",
@@ -464,18 +466,15 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div className="flex flex-row items-center justify-center py-20  relative w-full">
+    <div ref={ref} className="flex flex-row items-center  bg-gradient-to-b from-white to-pink-300justify-center py-20  relative w-full">
 
       <div className="max-w-7xl mx-auto w-full flex flex-col sm:flex-row relative overflow-hidden h-full md:h-[40rem] px-4">
 
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
+          style={{
+            transform: isInView ? "none" : "translateY(200px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
           }}
           transition={{
             duration: 1,

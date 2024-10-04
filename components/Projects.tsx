@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const projects = [
   { src: "/project1.webp", alt: "Project 1" },
@@ -10,12 +14,25 @@ const projects = [
 ];
 
 const Projects = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
 
-  
   return (
-    <section className="bg-gradient-to-b py-20 relative from-blue-700 via-indigo-500 to-white">
-      
-      <div className="max-w-7xl mx-auto px-3">
+    <section
+      ref={ref}
+      className="bg-gradient-to-b py-20 relative from-blue-700 via-indigo-500 to-white"
+    >
+      <motion.div
+        style={{
+          transform: isInView ? "none" : "translateY(200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+        transition={{
+          duration: 1,
+        }}
+        className="max-w-7xl mx-auto px-3"
+      >
         <h2 className=" text-4xl sm:text-6xl text-white drop-shadow-md text-center font-bold">
           Portfolio
         </h2>
@@ -35,7 +52,7 @@ const Projects = () => {
             />
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
