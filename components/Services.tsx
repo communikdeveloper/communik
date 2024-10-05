@@ -11,7 +11,7 @@ export function Services() {
 
   return (
     <motion.section
-    className=" bg-gradient-to-br py-20   from-yellow-500  via-yellow-200 to-white"
+      className=" bg-gradient-to-br py-20   from-yellow-500  via-yellow-200 to-white"
       ref={ref}
       style={{
         transform: isInView ? "none" : "translateY(200px)",
@@ -22,8 +22,12 @@ export function Services() {
         duration: 1,
       }}
     >
-      <h2 className="text-center text-4xl text-white drop-shadow-lg font-semibold">Our Services </h2>
-      <p className=" text-4xl sm:text-5xl text-blue-600 font-bold text-center mt-3">Growth Based Services</p>
+      <h2 className="text-center text-4xl text-white drop-shadow-lg font-semibold">
+        Our Services{" "}
+      </h2>
+      <p className=" text-4xl sm:text-5xl text-blue-600 font-bold text-center mt-3">
+        Growth Based Services
+      </p>
 
       <div className="pt-10 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-3 sm:px-8">
         <Card title="Logo Design Brand Identity" src="/website-design-bg.webp">
