@@ -10,17 +10,10 @@ export function Services() {
   const isInView = useInView(ref);
 
   return (
-    <motion.section
+    <section
       className=" bg-gradient-to-br py-20   from-yellow-500  via-yellow-200 to-white"
-      ref={ref}
-      style={{
-        transform: isInView ? "none" : "translateY(200px)",
-        opacity: isInView ? 1 : 0,
-        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-      }}
-      transition={{
-        duration: 1,
-      }}
+     
+      
     >
       <h2 className="text-center text-4xl text-white drop-shadow-lg font-semibold">
         Our Services{" "}
@@ -29,7 +22,18 @@ export function Services() {
         Growth Based Services
       </p>
 
-      <div className="pt-10 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-3 sm:px-8">
+      <motion.div
+       ref={ref}
+      style={{
+        transform: isInView ? "none" : "translateY(200px)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+      }}
+      transition={{
+        duration: 1,
+      }}
+      
+      className="pt-10 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-3 sm:px-8">
         <Card title="Logo Design Brand Identity" src="/website-design-bg.webp">
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -56,8 +60,8 @@ export function Services() {
             colors={[[125, 211, 252]]}
           />
         </Card>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 }
 
