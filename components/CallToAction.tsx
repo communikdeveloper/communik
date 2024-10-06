@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { useRef } from "react";
 
 export const CallToAction = () => {
@@ -20,8 +21,8 @@ export const CallToAction = () => {
     >
       <div className="container">
         <div className="max-w-[540px] mx-auto relative">
-          <h2 className="section-title leading-[80px]">
-            Let&apos;s Create Together.
+          <h2 className="section-title  leading-[80px]">
+            Let&apos;s Create Magic Together.
           </h2>
           <p className="section-desc mt-5">
             COMMUNIK is more than a design agency, we&apos;re your creative
@@ -48,11 +49,11 @@ export const CallToAction = () => {
           />
         </div>
 
-        <div className="flex gap-2 items-center mt-[30px] justify-center">
+        <Link href ="tel:8860341444" className="flex gap-2 items-center mt-[30px] justify-center">
           <button className=" bg-black px-3 py-2 rounded-md text-white">
             Book a Call
           </button>
-        </div>
+        </Link>
       </div>
     </section>
   );

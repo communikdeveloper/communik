@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Instagram, Linkedin, Phone, Mail } from "lucide-react";
+import Link from "next/link";
 
 const formSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
@@ -21,7 +22,11 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>;
 
-export function ContactFormComponent() {
+interface ContactProps {
+  isHomepage?: boolean;
+}
+
+export function ContactFormComponent({ isHomepage }: ContactProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
@@ -76,10 +81,18 @@ export function ContactFormComponent() {
   return (
     <div className="bg-yellow-500/70  py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-5xl font-bold text-center mb-2">Contact Us</h1>
-        <p className="text-center text-lg mb-8">
-          Any question or remarks? Just write us a message!
-        </p>
+
+        {
+          isHomepage && (
+            <div>
+            <h1 className="text-5xl text-white drop-shadow-md font-bold text-center mb-2">Contact Us</h1>
+            <p className="text-center text-blue-800 text-lg mb-8">
+              Any question or remarks? Just write us a message!
+            </p>
+          </div>
+          )
+        }
+        
 
         <div className="bg-white rounded-lg max-w-5xl mx-auto shadow-xl overflow-hidden">
           <div className="flex flex-col sm:flex-row ">
@@ -89,19 +102,19 @@ export function ContactFormComponent() {
               </h2>
               <p className="mb-4">Chat with us over a cup of coffee</p>
               <div className="space-y-4 mt-14">
-                <p className="flex items-center">
+                <Link href="tel:8860341444" className="flex items-center">
                   <Phone className="mr-2 text-yellow-400" /> +91 88603 41444
-                </p>
-                <p className="flex items-center">
+                </Link>
+                <Link href="mailto:cecommunik@gmail.com" className="flex items-center">
                   <Mail className="mr-2  text-yellow-400" />{" "}
                   cecommunik@gmail.com
-                </p>
-                <p className="flex items-center">
-                  <Instagram className="mr-2  text-yellow-400" /> @cecommunik
-                </p>
-                <p className="flex items-center">
+                </Link>
+                <Link href="https://www.instagram.com/Communik_ce/" target="_blank" className="flex items-center">
+                  <Instagram className="mr-2  text-yellow-400" /> @Communik_ce
+                </Link>
+                <Link href="https://www.linkedin.com/in/aarti-k-communik/" target="_blank" className="flex items-center">
                   <Linkedin className="mr-2  text-yellow-400" /> @communik-ce
-                </p>
+                </Link>
               </div>
             </div>
 

@@ -90,14 +90,6 @@ export function Globe({ globeConfig, data }: WorldProps) {
     maxRings: 3,
     ...globeConfig,
   };
-
-  useEffect(() => {
-    if (globeRef.current) {
-      _buildData();
-      _buildMaterial();
-    }
-  }, [globeRef.current]);
-
   const _buildMaterial = () => {
     if (!globeRef.current) return;
 
@@ -147,6 +139,15 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
     setGlobeData(filteredPoints);
   };
+
+  useEffect(() => {
+    if (globeRef.current) {
+      _buildData();
+      _buildMaterial();
+    }
+  }, [globeRef.current ,_buildData,_buildMaterial]);
+
+ 
 
   useEffect(() => {
     if (globeRef.current && globeData) {

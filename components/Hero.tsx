@@ -38,7 +38,7 @@ const Hero = () => {
               global scale.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
-              <Link href="tel:1234567" className="btn btn-primary">
+              <Link href="tel:8860341444" className="btn btn-primary">
                 <PhoneCallIcon className="mr-2" />
                 <span>Book a Call</span>
               </Link>

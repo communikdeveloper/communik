@@ -1,13 +1,12 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 import Image from "next/image";
 
 export function Services() {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
+ 
 
   return (
     <section
@@ -23,16 +22,7 @@ export function Services() {
       </p>
 
       <motion.div
-       ref={ref}
-      style={{
-        transform: isInView ? "none" : "translateY(200px)",
-        opacity: isInView ? 1 : 0,
-        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-      }}
-      transition={{
-        duration: 1,
-      }}
-      
+        
       className="pt-10 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-3 sm:px-8">
         <Card title="Logo Design Brand Identity" src="/website-design-bg.webp">
           <CanvasRevealEffect

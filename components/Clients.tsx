@@ -1,4 +1,5 @@
 import Marquee from "@/components/ui/marquee";
+import Image from "next/image";
 
 const reviews = [
   {
@@ -42,13 +43,12 @@ const ReviewCard = ({
 }) => {
   return (
     <div>
-       <img 
+       <Image 
         src={img}
         alt="name"
         className=""
         width={100}
         height={100}
-    
        />
     </div>
   );
