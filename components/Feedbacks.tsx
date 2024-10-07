@@ -77,8 +77,7 @@ const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
 });
 
 export function GlobeDemo() {
-  const ref = useRef(null)
-  const isInView = useInView(ref)
+ 
   const globeConfig = {
     pointSize: 4,
     globeColor: "#183EC2",
@@ -466,19 +465,12 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div ref={ref} className="flex flex-row items-center  bg-gradient-to-r from-white to-pink-300 justify-center py-20  relative w-full">
+    <div  className="flex flex-row items-center  bg-gradient-to-r from-white to-pink-300 justify-center py-20  relative w-full">
 
       <div className="max-w-7xl mx-auto w-full flex flex-col sm:flex-row relative overflow-hidden h-full md:h-[40rem] px-4">
 
-        <motion.div
-          style={{
-            transform: isInView ? "none" : "translateY(200px)",
-            opacity: isInView ? 1 : 0,
-            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-          }}
-          transition={{
-            duration: 1,
-          }}
+        <div
+          
           className=" w-full"
         >
           <div className="tag text-black border-black">Happy Clients</div>
@@ -497,7 +489,7 @@ export function GlobeDemo() {
               <ReviewCard key={review.username} {...review} />
             ))}
           </Marquee>
-        </motion.div>
+        </div>
 
         <div className="relative h-full w-full mt-10 ">
           <div className="w-full h-72 md:h-full z-10">
