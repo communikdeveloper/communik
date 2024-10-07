@@ -6,14 +6,8 @@ import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 import Image from "next/image";
 
 export function Services() {
- 
-
   return (
-    <section
-      className=" bg-gradient-to-br py-20   from-yellow-500  via-yellow-200 to-white"
-     
-      
-    >
+    <section className=" bg-gradient-to-br py-20   from-yellow-500  via-yellow-200 to-white">
       <h2 className="text-center text-4xl text-white drop-shadow-lg font-semibold">
         Our Services{" "}
       </h2>
@@ -21,16 +15,17 @@ export function Services() {
         Growth Based Services
       </p>
 
-      <motion.div
-        
-      className="pt-10 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-3 sm:px-8">
-        <Card title="Logo Design Brand Identity" src="/website-design-bg.webp">
+      <motion.div className="pt-10 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-3 sm:px-8">
+        <Card
+          title="Logo Design & Brand identity"
+          src="/website-design-bg.webp"
+        >
           <CanvasRevealEffect
             animationSpeed={5.1}
             containerClassName="bg-emerald-900"
           />
         </Card>
-        <Card title="Digital and Print Design" src="/branding-bg.webp">
+        <Card title="Digital & Print Design" src="/branding-bg.webp">
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-black"
@@ -43,7 +38,7 @@ export function Services() {
           {/* Radial gradient for the cute fade */}
           <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
         </Card>
-        <Card title="Retail Branding" src="/office-space-bg.webp">
+        <Card title="Retail & Office space branding" src="/office-space-bg.webp">
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-sky-600"
